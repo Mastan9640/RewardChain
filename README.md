@@ -118,7 +118,7 @@ Example:
 
 ```text
 Employee ID: EMP001
-Employee Name: Bhaskar
+Employee Name: Mastan
 Reward Points: 100
 ```
 
@@ -138,7 +138,7 @@ Click **RETRIEVE REWARD**.
 Expected result:
 
 ```text
-Employee Name: Bhaskar
+Employee Name: Mastan
 Reward Points: 100
 ```
 
