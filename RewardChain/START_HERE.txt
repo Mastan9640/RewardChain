@@ -1,0 +1,25 @@
+REWARDCHAIN - FINAL DELIVERABLE
+================================
+
+1. Open this folder in VS Code.
+2. Open a terminal in this folder.
+3. Run: npm.cmd install
+4. Compile: npm.cmd run compile
+5. Start local Ethereum: npm.cmd run node
+   Keep this terminal open.
+6. Open a SECOND terminal in the project folder.
+7. Deploy: npm.cmd run deploy
+8. Copy the deployed EmployeeRewardRegistry address.
+9. Edit frontend/src/config.js and replace:
+   PASTE_DEPLOYED_CONTRACT_ADDRESS_HERE
+   with the deployed address.
+10. Start the frontend in the second terminal:
+    npm.cmd run frontend
+11. Open the URL shown by Vite (normally http://localhost:5173/).
+12. Confirm the header says Blockchain Connected.
+13. Store a record, then retrieve the same Employee ID.
+
+IMPORTANT:
+- Do not submit private keys or node_modules.
+- The blockchain is local; no cloud database is required.
+- If the Hardhat node is restarted, deploy again and update the contract address.

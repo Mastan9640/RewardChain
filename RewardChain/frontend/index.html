@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RewardChain | Employee Reward Registry</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <h1>⛓ RewardChain</h1>
+        <p>Blockchain-Based Employee Reward Registry</p>
+      </div>
+      <div id="connectionStatus" class="status disconnected">🔴 Blockchain Not Connected</div>
+    </header>
+
+    <section class="card">
+      <h2>📋 Store Employee Reward</h2>
+      <p class="muted">Enter employee details and store the reward record on the local Ethereum blockchain.</p>
+      <form id="storeForm" class="grid-form">
+        <label>Employee ID<input id="employeeId" required placeholder="Example: EMP001" /></label>
+        <label>Employee Name<input id="employeeName" required placeholder="Example: Rahul Kumar" /></label>
+        <label>Reward Points<input id="rewardPoints" type="number" min="1" required placeholder="Example: 100" /></label>
+        <button type="submit" class="primary full">⛓ STORE REWARD ON BLOCKCHAIN</button>
+      </form>
+      <div id="storeMessage" class="message hidden"></div>
+    </section>
+
+    <section class="card">
+      <h2>🔍 Retrieve Employee Reward</h2>
+      <p class="muted">Enter an Employee ID to retrieve its reward record from the blockchain.</p>
+      <form id="retrieveForm">
+        <label>Employee ID<input id="retrieveId" required placeholder="Example: EMP001" /></label>
+        <button type="submit" class="secondary full">🔎 RETRIEVE REWARD</button>
+      </form>
+      <div id="retrieveMessage" class="message hidden"></div>
+    </section>
+
+    <section class="card result-card">
+      <h2>📊 Employee Reward Result</h2>
+      <div class="result-grid">
+        <div><span>Employee Name</span><strong id="resultName">—</strong></div>
+        <div><span>Reward Points</span><strong id="resultPoints">—</strong></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <h2>🔗 Blockchain Records</h2>
+          <p class="muted">Read all employee IDs currently stored in the smart contract.</p>
+        </div>
+        <button id="refreshRecords" class="outline">Refresh Records</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Employee ID</th><th>Employee Name</th><th>Reward Points</th></tr></thead>
+          <tbody id="recordsBody"><tr><td colspan="3">Connect to the blockchain to load records.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="info">
+      <strong>Local development</strong>
+      <span>RPC: http://127.0.0.1:8545</span>
+      <span id="contractAddressLabel">Contract: not loaded</span>
+    </section>
+  </main>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>

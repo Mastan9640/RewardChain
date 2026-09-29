@@ -1,0 +1,23 @@
+{
+  "name": "rewardchain",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Blockchain-based Employee Reward Registry for the Sankalpa Software Solutions internal blockchain hackathon.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "node": "hardhat node",
+    "deploy": "hardhat ignition deploy ignition/modules/EmployeeRewardRegistry.ts --network localhost",
+    "test": "hardhat test",
+    "frontend": "vite frontend"
+  },
+  "dependencies": {
+    "ethers": "^6.15.0",
+    "vite": "^7.1.7"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^3.1.8",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^4.0.0",
+    "hardhat": "^3.18.0",
+    "typescript": "^5.9.2"
+  }
+}
